@@ -3,6 +3,9 @@
 ################################################################################
 
 /.vs/Wpm
-/Wpm.Management.Api/bin/Debug/net9.0
-/Wpm.Management.Domain/bin/Debug/net9.0
-/Wpm.Management.Domain.Tests/bin/Debug/net9.0
+/Wpm.Management.Api/bin
+/Wpm.Management.Api/obj
+/Wpm.Management.Domain/bin
+/Wpm.Management.Domain/obj
+/Wpm.Management.Domain.Tests/bin
+/Wpm.Management.Domain.Tests/obj
