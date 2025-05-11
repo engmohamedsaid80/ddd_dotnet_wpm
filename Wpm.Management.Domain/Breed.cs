@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Wpm.Management.Domain;
+
+public class Breed : Entity
+{
+    public string Name { get; init; }
+    public WeightRange MaleIdealWeight { get; init; }
+    public WeightRange FemaleIdealWeight { get; init; }
+    public Breed(string name,
+                 WeightRange maleIdealWeight,
+                 WeightRange femaleIdealWeight)
+    {
+        Name = name;
+        MaleIdealWeight = maleIdealWeight;
+        FemaleIdealWeight = femaleIdealWeight;
+    }
+}
