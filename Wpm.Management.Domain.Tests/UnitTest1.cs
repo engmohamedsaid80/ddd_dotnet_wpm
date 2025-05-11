@@ -1,4 +1,6 @@
-﻿namespace Wpm.Management.Domain.Tests;
+﻿using Wpm.Management.Domain.Entities;
+
+namespace Wpm.Management.Domain.Tests;
 
 public class UnitTest1
 {

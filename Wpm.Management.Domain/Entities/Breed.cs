@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Wpm.Management.Domain.ValueObjects;
 
-namespace Wpm.Management.Domain;
+namespace Wpm.Management.Domain.Entities;
 
 public class Breed : Entity
 {
