@@ -9,12 +9,15 @@ public class Pet : Entity
     public string Color { get; init; }
     public Weight Weight { get; init; }
     public SexOfPet SexOfPet { get; init; }
+
+    public BreedId BreedId { get; init; }
     public Pet(Guid id,
                int age,
                string color,
                Weight weight,
                SexOfPet sexOfPet,
-               string name)
+               string name,
+               BreedId breedId)
     {
         Id = id;
         Age = age;
@@ -22,6 +25,7 @@ public class Pet : Entity
         Weight = weight;
         SexOfPet = sexOfPet;
         Name = name;
+        BreedId = breedId;
     }
 }
 
