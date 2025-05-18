@@ -9,3 +9,6 @@
 /Wpm.Management.Domain/obj
 /Wpm.Management.Domain.Tests/bin
 /Wpm.Management.Domain.Tests/obj
+/Wpm.Clinic.Api/obj
+/Wpm.Clinic.Domain/obj
+/Wpm.Clinic.Domain.Tests/obj
