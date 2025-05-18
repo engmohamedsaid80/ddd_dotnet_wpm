@@ -10,4 +10,6 @@ public record Weight
 
         Value = value;
     }
+
+    public static implicit operator Weight(decimal value) => new Weight(value);
 }

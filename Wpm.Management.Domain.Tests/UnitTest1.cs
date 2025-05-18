@@ -14,8 +14,8 @@ public class UnitTest1
         var breedService = new FakeBreedService();
         var breedId = new BreedId(breedService._breeds[0].Id, breedService);
 
-        var pet1 = new Pet(id,10, "Green", new Weight(10.10m), SexOfPet.Male, "PetName1", breedId);
-        var pet2 = new Pet(id,15, "Yellow", new Weight(15.10m), SexOfPet.Female, "PetName2", breedId);
+        var pet1 = new Pet(id,10, "Green", SexOfPet.Male, "PetName1", breedId);
+        var pet2 = new Pet(id,15, "Yellow", SexOfPet.Female, "PetName2", breedId);
 
         //Act
 
@@ -31,8 +31,8 @@ public class UnitTest1
         var breedService = new FakeBreedService();
         var breedId = new BreedId(breedService._breeds[0].Id, breedService);
 
-        var pet1 = new Pet(id, 10, "Green", new Weight(10.10m), SexOfPet.Male, "PetName1", breedId);
-        var pet2 = new Pet(id, 15, "Yellow", new Weight(15.10m), SexOfPet.Female, "PetName2", breedId);
+        var pet1 = new Pet(id, 10, "Green", SexOfPet.Male, "PetName1", breedId);
+        var pet2 = new Pet(id, 15, "Yellow", SexOfPet.Female, "PetName2", breedId);
 
         //Act
 
@@ -49,8 +49,8 @@ public class UnitTest1
         var breedService = new FakeBreedService();
         var breedId = new BreedId(breedService._breeds[0].Id, breedService);
 
-        var pet1 = new Pet(id1, 10, "Green", new Weight(10.10m), SexOfPet.Male, "PetName1", breedId);
-        var pet2 = new Pet(id2, 15, "Yellow", new Weight(15.10m), SexOfPet.Female, "PetName2", breedId);
+        var pet1 = new Pet(id1, 10, "Green", SexOfPet.Male, "PetName1", breedId);
+        var pet2 = new Pet(id2, 15, "Yellow", SexOfPet.Female, "PetName2", breedId);
 
         //Act
 
@@ -71,8 +71,8 @@ public class UnitTest1
     public void Weight_should_be_equal()
     {
         // Arrange
-        var weight1 = new Weight(10.10m);
-        var weight2 = new Weight(10.10m);
+        var weight1 = 10.10m;
+        var weight2 = 10.10m;
         // Act & Assert
         Assert.True(weight1 == weight2);
     }
@@ -111,5 +111,59 @@ public class UnitTest1
         {
             var breedId = new BreedId(id, breedService);
         });
+    }
+
+    [Fact]
+    public void WeightClass_should_be_ideal()
+    {
+        // Arrange
+        var breedService = new FakeBreedService();
+
+        var id = breedService._breeds[0].Id;
+        var breedId = new BreedId(id, breedService);
+
+        var pet = new Pet(Guid.NewGuid(), 10, "Green", SexOfPet.Male, "PetName1", breedId);
+
+        // Act
+        pet.SetWeight(25, breedService);
+
+        //Assert
+        Assert.True(pet.WeightClass == WeightClass.Ideal);
+    }
+
+    [Fact]
+    public void WeightClass_should_be_underweight()
+    {
+        // Arrange
+        var breedService = new FakeBreedService();
+
+        var id = breedService._breeds[0].Id;
+        var breedId = new BreedId(id, breedService);
+
+        var pet = new Pet(Guid.NewGuid(), 10, "Green", SexOfPet.Male, "PetName1", breedId);
+
+        // Act
+        pet.SetWeight(15, breedService);
+
+        //Assert
+        Assert.True(pet.WeightClass == WeightClass.Underweight);
+    }
+
+    [Fact]
+    public void WeightClass_should_be_overweight()
+    {
+        // Arrange
+        var breedService = new FakeBreedService();
+
+        var id = breedService._breeds[0].Id;
+        var breedId = new BreedId(id, breedService);
+
+        var pet = new Pet(Guid.NewGuid(), 10, "Green", SexOfPet.Male, "PetName1", breedId);
+
+        // Act
+        pet.SetWeight(40, breedService);
+
+        //Assert
+        Assert.True(pet.WeightClass == WeightClass.Overweight);
     }
 }
