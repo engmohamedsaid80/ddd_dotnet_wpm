@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpm.Clinic.Domain", "Wpm.Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpm.Clinic.Domain.Tests", "Wpm.Clinic.Domain.Tests\Wpm.Clinic.Domain.Tests.csproj", "{B1E03FF9-FED2-43D6-941E-3379541EF99B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpm.SharedKernel", "Wpm.SharedKernel\Wpm.SharedKernel.csproj", "{A5061A17-1448-418A-8B28-6071D9274812}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,18 @@ Global
 		{B1E03FF9-FED2-43D6-941E-3379541EF99B}.Release|x64.Build.0 = Release|Any CPU
 		{B1E03FF9-FED2-43D6-941E-3379541EF99B}.Release|x86.ActiveCfg = Release|Any CPU
 		{B1E03FF9-FED2-43D6-941E-3379541EF99B}.Release|x86.Build.0 = Release|Any CPU
+		{A5061A17-1448-418A-8B28-6071D9274812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5061A17-1448-418A-8B28-6071D9274812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5061A17-1448-418A-8B28-6071D9274812}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A5061A17-1448-418A-8B28-6071D9274812}.Debug|x64.Build.0 = Debug|Any CPU
+		{A5061A17-1448-418A-8B28-6071D9274812}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A5061A17-1448-418A-8B28-6071D9274812}.Debug|x86.Build.0 = Debug|Any CPU
+		{A5061A17-1448-418A-8B28-6071D9274812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5061A17-1448-418A-8B28-6071D9274812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5061A17-1448-418A-8B28-6071D9274812}.Release|x64.ActiveCfg = Release|Any CPU
+		{A5061A17-1448-418A-8B28-6071D9274812}.Release|x64.Build.0 = Release|Any CPU
+		{A5061A17-1448-418A-8B28-6071D9274812}.Release|x86.ActiveCfg = Release|Any CPU
+		{A5061A17-1448-418A-8B28-6071D9274812}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

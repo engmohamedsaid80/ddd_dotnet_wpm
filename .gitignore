@@ -12,3 +12,8 @@
 /Wpm.Clinic.Api/obj
 /Wpm.Clinic.Domain/obj
 /Wpm.Clinic.Domain.Tests/obj
+/Wpm.Clinic.Api/bin/Debug/net9.0
+/Wpm.Clinic.Domain/bin/Debug/net9.0
+/Wpm.Clinic.Domain.Tests/bin/Debug/net9.0
+/Wpm.SharedKernel/bin/Debug/net9.0
+/Wpm.SharedKernel/obj
