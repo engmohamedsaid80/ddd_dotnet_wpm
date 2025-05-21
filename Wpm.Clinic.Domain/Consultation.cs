@@ -5,6 +5,9 @@ namespace Wpm.Clinic.Domain;
 
 public class Consultation : AggregateRoot
 {
+    private readonly List<DrugAdministration> _administeredDrugs = new();
+
+    public IReadOnlyCollection<DrugAdministration> AdministeredDrugs => _administeredDrugs.AsReadOnly();
     public DateTime StartedAt { get; init; }
     public DateTime? EndedAt { get; private set; }
     public Text Diagnosis { get; private set; }
@@ -22,6 +25,15 @@ public class Consultation : AggregateRoot
         PaitentId = paitentId;
         Status = ConsultationStatus.Open;
         StartedAt = DateTime.UtcNow;
+    }
+
+    public void AdministerDrug(DrugId drugId, Dose dose)
+    {
+        ValidateConsultationStatus();
+        // Logic to administer the drug
+        // This could involve creating a DrugAdministration entity and saving it to the database
+        var drugAdministration = new DrugAdministration(drugId, dose);
+        _administeredDrugs.Add(drugAdministration);
     }
 
     public void End()
