@@ -16,12 +16,12 @@ namespace Wpm.Clinic.Domain.ValueObjects
             Quantity = quantity;
             Unit = unit;
         }
-    }
 
-    public enum UnitOfMeasure
-    {
-        mg,
-        ml,
-        tablet
-    }
+        public enum UnitOfMeasure
+        {
+            mg,
+            ml,
+            tablet
+        }
+    }    
 }

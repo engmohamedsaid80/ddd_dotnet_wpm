@@ -24,7 +24,7 @@ namespace Wpm.Clinic.Domain.ValueObjects
                 throw new ArgumentException("Text cannot be longer than 100 characters.", nameof(value));
         }
 
-        public static implicit operator string(Text value)
+        public static implicit operator Text(string value)
         {
             return new Text(value);
         }

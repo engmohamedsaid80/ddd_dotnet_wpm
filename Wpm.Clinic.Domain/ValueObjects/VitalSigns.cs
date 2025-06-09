@@ -17,9 +17,9 @@ namespace Wpm.Clinic.Domain.ValueObjects
             HeartRate = hearRate;
             RespiratoryRate = respiratoryRate;
         }
-        public DateTime ReadingDateTime { get; }
-        public decimal Temperature { get; }
-        public int HeartRate { get; }
-        public int RespiratoryRate { get; }
+        public DateTime ReadingDateTime { get; init; }
+        public decimal Temperature { get; init; }
+        public int HeartRate { get; init; }
+        public int RespiratoryRate { get; init; }
     }
 }
